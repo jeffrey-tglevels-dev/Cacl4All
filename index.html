@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calculator" aria-label="Calculator">
+    <header class="top-bar">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">◐</button>
+      <button class="icon-btn" id="historyToggle" title="History" aria-label="Show history">⟲</button>
+    </header>
+
+    <section class="display" aria-live="polite">
+      <div class="expression" id="expression">0</div>
+      <div class="preview" id="preview"></div>
+    </section>
+
+    <section class="history" id="history" hidden>
+      <div class="history-head">
+        <span>History</span>
+        <button class="link-btn" id="clearHistory">Clear</button>
+      </div>
+      <ul id="historyList"></ul>
+    </section>
+
+    <section class="keys">
+      <button class="key fn" data-action="clear">AC</button>
+      <button class="key fn" data-action="sign">±</button>
+      <button class="key fn" data-action="percent">%</button>
+      <button class="key op" data-op="/">÷</button>
+
+      <button class="key" data-num="7">7</button>
+      <button class="key" data-num="8">8</button>
+      <button class="key" data-num="9">9</button>
+      <button class="key op" data-op="*">×</button>
+
+      <button class="key" data-num="4">4</button>
+      <button class="key" data-num="5">5</button>
+      <button class="key" data-num="6">6</button>
+      <button class="key op" data-op="-">−</button>
+
+      <button class="key" data-num="1">1</button>
+      <button class="key" data-num="2">2</button>
+      <button class="key" data-num="3">3</button>
+      <button class="key op" data-op="+">+</button>
+
+      <button class="key" data-action="back" aria-label="Backspace">⌫</button>
+      <button class="key" data-num="0">0</button>
+      <button class="key" data-action="dot">.</button>
+      <button class="key eq" data-action="equals">=</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
